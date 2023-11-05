@@ -1,16 +1,33 @@
-<div style="
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  font-family: 'Helvetica', Arial, sans-serif;
-  color: #333;
-  font-size: 18px;">
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRgGFBAqAJy0MCdEgAgW-JvLX6hhgRmQbJK5NjPjQ-sHRTxEDjSUMYirAylG3SH138LqHQ-XzS6JQRT/pubhtml?gid=1958351183&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600" style="
-    border: none;
-    border-radius: 10px;
-    box-shadow: none;"></iframe>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="button" onclick="authenticateUser()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function authenticateUser() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the entered username and password are correct
+            if (username === "Admin" && password === "2ndApril2008") {
+                // Redirect to another page when credentials are correct
+                window.location.href = "https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTQDcF7t4fzflkO5kDld5xk5qZecTpnlbfBjWHaBkQv6_9JWv2ucQ3zk2ksQ-MLQYL5oeSMv0Zslrc9/pubhtml";
+            } else {
+                alert("Incorrect username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
